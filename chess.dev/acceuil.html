@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambit de Roi</title>
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', cursive;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #e0e0e0, #c0c0c0);
+            background-size: 400% 400%;
+            animation: gradientMove 6s infinite;
+            color: #333;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container styling */
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 550px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 0;
+            margin: 20px auto;
+            max-width: 340px;
+            border: 2px solid #888;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chess-board div {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .chess-board .white {
+            background: #f5f5f5;
+        }
+
+        .chess-board .black {
+            background: #a0a0a0;
+            color: #000;
+        }
+
+        .play-button {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+            background: linear-gradient(90deg, #888, #555);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.4s, transform 0.2s, box-shadow 0.4s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-button:hover {
+            background: linear-gradient(90deg, #555, #333);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Gambit de Roi</div>
+        <div class="chess-board">
+            <!-- First row -->
+            <div class="black">♜</div>
+            <div class="white">♞</div>
+            <div class="black">♝</div>
+            <div class="white">♛</div>
+            <div class="black">♚</div>
+            <div class="white">♝</div>
+            <div class="black">♞</div>
+            <div class="white">♜</div>
+            <!-- Second row -->
+            <div class="white">♟</div>
+            <div class="black">♟</div>
+            <div class="white">♟</div>
+            <div class="black">♟</div>
+            <div class="white">♟</div>
+            <div class="black">♟</div>
+            <div class="white">♟</div>
+            <div class="black">♟</div>
+            <!-- Empty rows -->
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <!-- Seventh row -->
+            <div class="black">♙</div>
+            <div class="white">♙</div>
+            <div class="black">♙</div>
+            <div class="white">♙</div>
+            <div class="black">♙</div>
+            <div class="white">♙</div>
+            <div class="black">♙</div>
+            <div class="white">♙</div>
+            <!-- Eighth row -->
+            <div class="white">♖</div>
+            <div class="black">♘</div>
+            <div class="white">♗</div>
+            <div class="black">♕</div>
+            <div class="white">♔</div>
+            <div class="black">♗</div>
+            <div class="white">♘</div>
+            <div class="black">♖</div>
+        </div>
+        <button class="play-button" onclick="window.location.href='index (1).html'">Jouer</button>
+    </div>
+</body>
+</html>
